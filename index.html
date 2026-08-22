@@ -231,25 +231,6 @@
 										<li class="icon solid fa-envelope"><a href="mailto:khaled.eee.duet@gmail.com">khaled.eee.duet@gmail.com</a></li>
 										<li class="icon solid fa-phone">+880 1641-178789</li>
 									</ul>
-
-									<!--
-										CONTACT FORM SETUP (Khaled, read this):
-
-										Option A - Web3Forms (active below, recommended - simplest, sends to your email):
-										1. Go to https://web3forms.com and enter your email to get a free Access Key
-										   (no account/password needed, key arrives instantly by email).
-										2. Replace YOUR_WEB3FORMS_ACCESS_KEY_HERE below with that key.
-										3. Done - submissions land straight in your inbox.
-
-										Option B - Discord webhook (commented out further below):
-										1. In Discord: Server Settings > Integrations > Webhooks > New Webhook.
-										2. Copy the Webhook URL.
-										3. Delete/comment the <form> below and uncomment the Discord <script> block,
-										   pasting your webhook URL where marked.
-										   Note: the webhook URL will be visible in your page's source code, so anyone
-										   could technically send messages into your channel. Fine for a low-traffic
-										   personal site; just know the tradeoff.
-									-->
 									<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 										<input type="hidden" name="access_key" value="2d3ed965-25ee-4088-886b-2bacbcf83687">
 										<input type="hidden" name="subject" value="New message from portfolio site">
@@ -271,43 +252,6 @@
 											<li><input type="submit" value="Send Message" class="primary" /></li>
 										</ul>
 									</form>
-
-									<!-- DISCORD WEBHOOK ALTERNATIVE (uncomment to use instead of the form above)
-									<form id="discord-contact-form">
-										<div class="fields">
-											<div class="field half">
-												<label for="d-name">Name</label>
-												<input type="text" id="d-name" required />
-											</div>
-											<div class="field half">
-												<label for="d-email">Email</label>
-												<input type="email" id="d-email" required />
-											</div>
-											<div class="field">
-												<label for="d-message">Message</label>
-												<textarea id="d-message" rows="4" required></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-										</ul>
-									</form>
-									<script>
-									document.getElementById('discord-contact-form').addEventListener('submit', function(e) {
-										e.preventDefault();
-										const name = document.getElementById('d-name').value;
-										const email = document.getElementById('d-email').value;
-										const message = document.getElementById('d-message').value;
-										fetch('YOUR_DISCORD_WEBHOOK_URL_HERE', {
-											method: 'POST',
-											headers: { 'Content-Type': 'application/json' },
-											body: JSON.stringify({
-												content: `**New portfolio message**\nFrom: ${name} (${email})\n\n${message}`
-											})
-										}).then(() => alert('Message sent!'));
-									});
-									</script>
-									-->
 								</section>
 
 							<!-- Footer -->
